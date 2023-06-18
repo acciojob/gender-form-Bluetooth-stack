@@ -12,8 +12,8 @@ const Form = () => {
     return (
         <div>
             <h2>Select your gender:</h2>
-            <input type="radio" value={"male"} onClick={gender}></input><label>Male</label>
-            <input type="radio" value={"female"}></input><label>Female</label>
+            <input type="radio" value={"male"} onClick={gender} name="gender"></input><label>Male</label>
+            <input type="radio" value={"female"} onClick={gender} name="gender"></input><label>Female</label>
             {
                 g === "male" ?
                     <div>
@@ -24,7 +24,7 @@ const Form = () => {
                             <option>Medium</option>
                             <option>Large</option>
                         </select>
-                    </div>:
+                    </div>:g==="female"?
                     <div>
                     <h2>Select your dress size:</h2>
                     <select>
@@ -33,7 +33,7 @@ const Form = () => {
                         <option>4</option>
                         <option>6</option>
                     </select>
-                </div>
+                </div>:<span></span>
 
             }
         </div>
